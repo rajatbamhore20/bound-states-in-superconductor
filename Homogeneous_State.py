@@ -20,6 +20,7 @@ def s_wave_band_structure(t, del0):
     Ey = -2 * t * (-1 + np.cos(y - np.pi))
     Ez = -4 * t * np.cos(z - 3 * np.pi)
     ax = plt.subplot()
+    #thsi is also edited
     plt.plot(x, eigen(Ex, del0, 1), label = "$k_x+$")
     plt.plot(x, eigen(Ex, del0, 0), label = "$k_x-$")
     plt.plot(y, eigen(Ey, del0, 1), label="$k_y+$")
