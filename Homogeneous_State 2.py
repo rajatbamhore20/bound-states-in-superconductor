@@ -25,6 +25,7 @@ def s_wave_band_structure(t, del0):
     plt.plot(z, eigen(Ez, del0, 0), label = "$k_z-$")
     plt.legend(fontsize = 8)
     plt.axhline(0, color='black', linewidth=1)
+    #edited the file
     plt.title("Homogeneous S-wave State Band Structure")
     plt.xlabel("k-path")
     plt.ylabel("$Energy(E_k)$")
