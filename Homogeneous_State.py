@@ -98,5 +98,5 @@ def plot_ldos(t, ita, f, del0):
 
 # s_wave_band_structure(t, del0 = float(input()))
 # d_wave_band_structure(t, del0 = float(input()))
-plot_ldos(t, ita, "S", del0 = float(input()))
+# plot_ldos(t, ita, "S", del0 = float(input()))
 # plot_ldos(t, ita, "D", del0 = float(input()))

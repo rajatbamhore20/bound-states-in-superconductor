@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import time
-print(time.time())
 
 t = int(input())
 ita = 5*10**(-2)
@@ -28,6 +27,8 @@ def band_structure(t):
     plt.show()
     return
 
+def Energy(t, x, y, mu):
+    return -2*t*(np.cos(x) + np.cos(y)) - mu
 def fermi_surface(t):
     x = np.linspace(-np.pi, np.pi, 100)
     y = np.linspace(-np.pi, np.pi, 100)
@@ -40,11 +41,12 @@ def fermi_surface(t):
     plt.ylabel("Y")
     plt.axhline(0, color='black')
     plt.axvline(0, color='black')
+    plt.xlim(-np.pi, np.pi)
+    plt.ylim(-np.pi, np.pi)
     plt.show()
     return
+fermi_surface(t)
 
-def Energy(t, x, y, mu):
-    return -2*t*(np.cos(x) + np.cos(y)) - mu
 
 def plot_ldos(t, ita):
     x = np.linspace(-5, 5, 1000)
@@ -158,10 +160,10 @@ def Homogeneous_ldos(t, ita, f, del0):
 
 band_structure(t)
 fermi_surface(t)
-# plot_ldos(t, ita)
+plot_ldos(t, ita)
 s_wave_band_structure(t, del0 = float(input()))
-# d_wave_band_structure(t, del0 = float(input()))
-# Homogeneous_ldos(t, ita, "S", del0 = float(input()))
-# Homogeneous_ldos(t, ita, "D", del0 = float(input()))
+d_wave_band_structure(t, del0 = float(input()))
+Homogeneous_ldos(t, ita, "S", del0 = float(input()))
+Homogeneous_ldos(t, ita, "D", del0 = float(input()))
 
 
