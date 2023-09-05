@@ -1,12 +1,18 @@
+<<<<<<< HEAD
 import random
 
+=======
+>>>>>>> 3ec502bf72505e939a8ec7be1f365cb63ee2804e
 import numpy as np
 import matplotlib.pyplot as plt
 from collections import defaultdict
 import time
 
 t = int(input())
+<<<<<<< HEAD
 del0 = float(input())
+=======
+>>>>>>> 3ec502bf72505e939a8ec7be1f365cb63ee2804e
 def eigen(n):
     lst = [[0 for i in range(n)] for j in range(n)]
     for i in range(n):
@@ -44,8 +50,13 @@ def eigen_2d(n):
             lst[p[(i, j)]][p[(i+1)%n, j]] = t
             lst[p[(i, j)]][p[(i, (j-1)%n)]] = t
             lst[p[(i, j)]][p[(i, (j+1)%n)]] = t
+<<<<<<< HEAD
     for i in lst:
         print(*i)
+=======
+    # for i in lst:
+    #     print(*i)
+>>>>>>> 3ec502bf72505e939a8ec7be1f365cb63ee2804e
     eig, _ = np.linalg.eig(lst)
     eig_k = []
     for i in range(n):
@@ -73,6 +84,7 @@ def eigen_2d(n):
     plt.show()
     print(hermiticity(lst,n**2))
     return
+<<<<<<< HEAD
 # eigen(10)
 # eigen_2d(5)
 
@@ -155,3 +167,6 @@ plt.ylabel("$|E_{b}|/∇$", fontsize = 12)
 plt.xlabel("$V_{imp}$", fontsize = 12)
 plt.title("S-wave magnetic impurity bound state energy eigenvalues", fontsize = 12)
 plt.show()
+=======
+eigen(10)
+>>>>>>> 3ec502bf72505e939a8ec7be1f365cb63ee2804e
